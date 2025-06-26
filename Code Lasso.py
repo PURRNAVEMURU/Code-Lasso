@@ -12,7 +12,7 @@ data = pd.read_excel('D:\Quantum\Data quantum.xlsx')
 X = data[['Vpp','Vrms','Vavg-rect','Vpeak',]]
 
 y = data['Ground Truth']
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
 # Create a Lasso Regressor
 lasso_regressor = Lasso(alpha=0.3)  # You can adjust the regularization strength (alpha)
